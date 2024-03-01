@@ -16,6 +16,10 @@
 		7AC4DDFF2B85A9EC0058E38B /* Test_sentryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4DDFE2B85A9EC0058E38B /* Test_sentryTests.swift */; };
 		7AC4DE092B85A9EC0058E38B /* Test_sentryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4DE082B85A9EC0058E38B /* Test_sentryUITests.swift */; };
 		7AC4DE0B2B85A9EC0058E38B /* Test_sentryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4DE0A2B85A9EC0058E38B /* Test_sentryUITestsLaunchTests.swift */; };
+		7AC4DE192B85C6D00058E38B /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		7AC4DE1A2B85C6D00058E38B /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		7AF86B182B90758700B08229 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF86B172B90758700B08229 /* GoogleService-Info.plist */; };
+		A96EDE901BAD4A80815E5CA6 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = EF6398C32939490C8FB53597 /* Sentry */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 		7AC4DE042B85A9EC0058E38B /* Test sentryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test sentryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC4DE082B85A9EC0058E38B /* Test_sentryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_sentryUITests.swift; sourceTree = "<group>"; };
 		7AC4DE0A2B85A9EC0058E38B /* Test_sentryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_sentryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AF86B172B90758700B08229 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96EDE901BAD4A80815E5CA6 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC4DE192B85C6D00058E38B /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC4DE1A2B85C6D00058E38B /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,7 @@
 		7AC4DDE62B85A9EA0058E38B /* Test sentry */ = {
 			isa = PBXGroup;
 			children = (
+				7AF86B172B90758700B08229 /* GoogleService-Info.plist */,
 				7AC4DDE72B85A9EA0058E38B /* AppDelegate.swift */,
 				7AC4DDE92B85A9EA0058E38B /* SceneDelegate.swift */,
 				7AC4DDEB2B85A9EA0058E38B /* ViewController.swift */,
@@ -137,12 +146,16 @@
 				7AC4DDE02B85A9EA0058E38B /* Sources */,
 				7AC4DDE12B85A9EA0058E38B /* Frameworks */,
 				7AC4DDE22B85A9EA0058E38B /* Resources */,
+				51305D745B5F471F9F04941B /* Upload Debug Symbols to Sentry */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Test sentry";
+			packageProductDependencies = (
+				EF6398C32939490C8FB53597 /* Sentry */,
+			);
 			productName = "Test sentry";
 			productReference = 7AC4DDE42B85A9EA0058E38B /* Test sentry.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 7AC4DDDB2B85A9EA0058E38B;
+			packageReferences = (
+				E30223B68E9742B288CECB57 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+			);
 			productRefGroup = 7AC4DDE52B85A9EA0058E38B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC4DDF42B85A9EB0058E38B /* LaunchScreen.storyboard in Resources */,
+				7AF86B182B90758700B08229 /* GoogleService-Info.plist in Resources */,
 				7AC4DDF12B85A9EB0058E38B /* Assets.xcassets in Resources */,
 				7AC4DDEF2B85A9EA0058E38B /* Main.storyboard in Resources */,
 			);
@@ -252,6 +269,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51305D745B5F471F9F04941B /* Upload Debug Symbols to Sentry */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/.sentryclirc",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+			);
+			name = "Upload Debug Symbols to Sentry";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script is responsible for uploading debug symbols and source context to Sentry.\n\nif which sentry-cli >/dev/null; then\n    export SENTRY_ORG=test-6aq\n    export SENTRY_PROJECT=apple-ios\n    sentry-cli debug-files upload --include-sources \"$DWARF_DSYM_FOLDER_PATH\" --log-level=debug --force-foreground\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, install using 'brew install getsentry/tools/sentry-cli'\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7AC4DDE02B85A9EA0058E38B /* Sources */ = {
@@ -442,6 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 497N7524MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Test sentry/Info.plist";
@@ -470,6 +511,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 497N7524MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Test sentry/Info.plist";
@@ -607,6 +649,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E30223B68E9742B288CECB57 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF6398C32939490C8FB53597 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E30223B68E9742B288CECB57 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AC4DDDC2B85A9EA0058E38B /* Project object */;
 }
