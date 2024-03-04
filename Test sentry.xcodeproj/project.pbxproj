@@ -18,7 +18,6 @@
 		7AC4DE0B2B85A9EC0058E38B /* Test_sentryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4DE0A2B85A9EC0058E38B /* Test_sentryUITestsLaunchTests.swift */; };
 		7AC4DE192B85C6D00058E38B /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		7AC4DE1A2B85C6D00058E38B /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		7AF86B182B90758700B08229 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF86B172B90758700B08229 /* GoogleService-Info.plist */; };
 		A96EDE901BAD4A80815E5CA6 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = EF6398C32939490C8FB53597 /* Sentry */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		7AC4DE042B85A9EC0058E38B /* Test sentryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test sentryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC4DE082B85A9EC0058E38B /* Test_sentryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_sentryUITests.swift; sourceTree = "<group>"; };
 		7AC4DE0A2B85A9EC0058E38B /* Test_sentryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_sentryUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7AF86B172B90758700B08229 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 		7AC4DDE62B85A9EA0058E38B /* Test sentry */ = {
 			isa = PBXGroup;
 			children = (
-				7AF86B172B90758700B08229 /* GoogleService-Info.plist */,
 				7AC4DDE72B85A9EA0058E38B /* AppDelegate.swift */,
 				7AC4DDE92B85A9EA0058E38B /* SceneDelegate.swift */,
 				7AC4DDEB2B85A9EA0058E38B /* ViewController.swift */,
@@ -248,7 +245,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC4DDF42B85A9EB0058E38B /* LaunchScreen.storyboard in Resources */,
-				7AF86B182B90758700B08229 /* GoogleService-Info.plist in Resources */,
 				7AC4DDF12B85A9EB0058E38B /* Assets.xcassets in Resources */,
 				7AC4DDEF2B85A9EA0058E38B /* Main.storyboard in Resources */,
 			);
@@ -282,7 +278,7 @@
 			inputPaths = (
 				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 				"$(SRCROOT)/.sentryclirc",
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}",
 			);
 			name = "Upload Debug Symbols to Sentry";
 			outputPaths = (
